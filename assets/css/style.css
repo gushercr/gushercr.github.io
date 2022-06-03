@@ -464,7 +464,12 @@ header .options {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+}
+@media (max-width:700px){
+  .group-contact{
+    justify-content: center;
+  }
 }
 .group-contact .icon {
   background-color: #1b4d51;
