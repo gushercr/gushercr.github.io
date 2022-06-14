@@ -174,15 +174,15 @@ header .options {
   padding: 4px;
 }
 @keyframes entranceTop {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .options a {
   color: #c9cbda;
@@ -395,7 +395,7 @@ header .options {
   align-items: center;
   animation: entrance 0.2s ease 0s 1 normal forwards;
 }
-.layer-goUrl button {
+.layer-goUrl a {
   background-color: transparent;
   padding: 7px;
   color: rgb(222, 222, 222);
@@ -403,6 +403,7 @@ header .options {
   border-radius: 4px;
   width: 35%;
   font-weight: bold;
+  text-align: center;
 }
 @keyframes entrance {
   0% {
@@ -415,8 +416,9 @@ header .options {
 }
 .item-header img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
+  height: 200px;
+  object-fit: cover;
+  /* aspect-ratio: 16/9; */
   border-radius: 10px 10px 0px 0px;
 }
 .item-header .tags {
@@ -439,6 +441,9 @@ header .options {
 }
 .item-footer .description {
   color: #9f9f9f;
+  max-height: 70px;
+  height: 70px;
+  overflow: hidden;
 }
 /*Contacto*/
 #section-contact button {
@@ -466,8 +471,8 @@ header .options {
   align-items: center;
   justify-content: left;
 }
-@media (max-width:700px){
-  .group-contact{
+@media (max-width: 700px) {
+  .group-contact {
     justify-content: center;
   }
 }
