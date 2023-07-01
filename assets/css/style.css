@@ -15,6 +15,7 @@ a {
   --bg-bottom-title: #42917d;
   --bg-buttons: #42917d;
   --bg-sections: #001628;
+  --bg-lineOfTime: #f8f9fa;
 }
 .color-bold {
   color: var(--bg-bottom-title);
@@ -500,3 +501,49 @@ footer {
   height: 100px !important;
   max-width: 100%;
 }
+/* Experencie */
+.line-separator{
+  height: 120px;
+  width: 4px;
+  background-color: var(--bg-lineOfTime);
+  position: relative;
+}
+.experience-item{
+  border: solid 2px gray;
+  padding: 0.7em;
+  border-radius: 5px;
+  min-width: 250px;
+  display: flex;
+}
+.experience-item p,h1,h2{
+  margin: 0px;
+}
+.experience-item img{
+  width: 2em;
+  height: 2em;
+}
+.left{
+  position: absolute;
+}
+.rigth{
+  position: absolute;
+}
+.img-experience{
+  display: flex;
+  align-items: center;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--bg-lineOfTime);
+}
+/* @media (max-width: 700px) {
+  .left {
+    position: initial;
+  }
+  .rigth{
+    position: initial;
+  }
+} */

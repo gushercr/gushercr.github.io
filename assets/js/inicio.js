@@ -11,6 +11,7 @@ $(document).delegate(
 );
 $(document).ready(function (e) {
     setHeigthOfSection();
+    setSizeItemsExperience();
     $(window).resize(function () {
         setHeigthOfSection();
     });
@@ -51,6 +52,12 @@ function setActiveForSection() {
             $(this).removeClass("active");
         });
         $("#a-contact").addClass("active")
+    }
+    if (elementScrolled('#section-experience')) {
+        $(".options a").each(function () {
+            $(this).removeClass("active");
+        });
+        $("#a-experience").addClass("active")
     }
 }
 function elementScrolled(elem) {
@@ -122,6 +129,23 @@ $('#btn-menu').click(function () {
     $('.options-movil').toggle();
 })
 /*Menu para dispositivos moviles-end*/
+// left o right dinamico para elementos de experiencia
+const leftDefault=70;
+const rightDefault=50;
+function setSizeItemsExperience (){
+    $('.experience-item').each(function() {
+        let width = $(this).width();
+        if ($(this).hasClass('left'))
+        {               
+            width=(width+leftDefault)*-1
+            $(this).css('left', width+'px');
+        }else
+        {
+            $(this).css('left', rightDefault+'px');
+        }
+    });
+}
+// left o right dinamico para elementos de experiencia-end
 const typeWriter = document.getElementById("typewriter-text");
 const text = "Gustavo Angel Hernández";
 
